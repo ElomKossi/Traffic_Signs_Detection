@@ -1,0 +1,6 @@
+.vscode/
+.DS_Store
+*.data
+*.cfg
+*.names
+*.weights
