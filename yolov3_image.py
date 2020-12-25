@@ -250,18 +250,21 @@ def yolov3_image(path):
     End of:
     Drawing bounding boxes and labels
     """
+    # Saving the image
+    new_path = path[:-4]+'-result'+path[-4:]
+    cv2.imwrite(new_path, image_BGR) 
 
 
-    # Showing Original Image with Detected Objects
-    # Giving name to the window with Original Image
-    # And specifying that window is resizable
-    cv2.namedWindow('Detections', cv2.WINDOW_NORMAL)
-    # Pay attention! 'cv2.imshow' takes images in BGR format
-    cv2.imshow('Detections', image_BGR)
-    # Waiting for any key being pressed
-    cv2.waitKey(0)
-    # Destroying opened window with name 'Detections'
-    cv2.destroyWindow('Detections')
+    # # Showing Original Image with Detected Objects
+    # # Giving name to the window with Original Image
+    # # And specifying that window is resizable
+    # cv2.namedWindow('Detections', cv2.WINDOW_NORMAL)
+    # # Pay attention! 'cv2.imshow' takes images in BGR format
+    # cv2.imshow('Detections', image_BGR)
+    # # Waiting for any key being pressed
+    # cv2.waitKey(0)
+    # # Destroying opened window with name 'Detections'
+    # cv2.destroyWindow('Detections')
 
 
     """
